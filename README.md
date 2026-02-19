@@ -108,3 +108,11 @@ vibe-sec-dirty-machine/
 - The teardown scripts restore backups and clean up all test artifacts
 - The git repo fixture is created in `/tmp/` (or `$env:TEMP` on Windows)
 - No real credentials are used anywhere in this test environment
+
+## Related Projects
+
+| Project | Platform | Description |
+|---------|----------|-------------|
+| [vibe-sec](https://github.com/kobzevvv/vibe-sec) | All | Security scanner CLI (main project) |
+| [vibe-sec-app](https://github.com/kobzevvv/vibe-sec-app) | macOS | Menubar app |
+| [vibe-sec-app-win](https://github.com/kobzevvv/vibe-sec-app-win) | Windows | System tray app |
