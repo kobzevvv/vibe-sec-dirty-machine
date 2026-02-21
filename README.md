@@ -1,6 +1,6 @@
-# Dirty Machine Test Environment
+# Safe-Space Sandbox — Test Environment
 
-Test fixtures for [vibe-sec](https://github.com/kobzevvv/vibe-sec) — simulates a developer's messy/insecure setup to trigger ALL static security checks and produce a comprehensive report.
+Test fixtures for [safe-space](https://github.com/Chill-AI-Space/safe-space) — simulates a developer's messy/insecure setup to trigger ALL static security checks and produce a comprehensive report.
 
 **All secrets in this repo are FAKE.** They use prefixes like `fake`, `test`, `FAKE` and are obviously synthetic. Values include `_TESTFIXTURE` markers to prevent false alerts from GitHub Push Protection and GitGuardian.
 
@@ -8,17 +8,17 @@ Test fixtures for [vibe-sec](https://github.com/kobzevvv/vibe-sec) — simulates
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/kobzevvv/vibe-sec-dirty-machine.git
-cd vibe-sec-dirty-machine
+git clone https://github.com/Chill-AI-Space/safe-space-sandbox.git
+cd safe-space-sandbox
 
 # 2. Set up the dirty environment (installs fixtures to ~/)
 ./setup-macos.sh
 
-# 3. Run the vibe-sec scanner (install vibe-sec first: npm i -g vibe-sec)
-npx vibe-sec --static-only
+# 3. Run the safe-space scanner (install safe-space first: npm i -g safe-space)
+npx safe-space --static-only
 
 # 4. View the report
-open vibe-sec-log-report-*.html
+open safe-space-log-report-*.html
 
 # 5. Clean up (restores all backups)
 ./teardown.sh
@@ -27,7 +27,7 @@ open vibe-sec-log-report-*.html
 Windows:
 ```powershell
 .\setup-windows.ps1
-npx vibe-sec --static-only
+npx safe-space --static-only
 .\teardown.ps1
 ```
 
@@ -68,7 +68,7 @@ These checks examine live system state and cannot be triggered by static fixture
 ## Directory Structure
 
 ```
-vibe-sec-dirty-machine/
+safe-space-sandbox/
   fixtures/                   # All fake insecure files
     claude-settings.json      # dangerousMode + MCP tokens + @latest
     claude-history.jsonl      # prompt injection indicators
@@ -113,6 +113,6 @@ vibe-sec-dirty-machine/
 
 | Project | Platform | Description |
 |---------|----------|-------------|
-| [vibe-sec](https://github.com/kobzevvv/vibe-sec) | All | Security scanner CLI (main project) |
-| [vibe-sec-app](https://github.com/kobzevvv/vibe-sec-app) | macOS | Menubar app |
-| [vibe-sec-app-win](https://github.com/kobzevvv/vibe-sec-app-win) | Windows | System tray app |
+| [safe-space](https://github.com/Chill-AI-Space/safe-space) | All | Security scanner CLI (main project) |
+| [safe-space-macos](https://github.com/Chill-AI-Space/safe-space-macos) | macOS | Menubar app |
+| [safe-space-windows](https://github.com/Chill-AI-Space/safe-space-windows) | Windows | System tray app |
